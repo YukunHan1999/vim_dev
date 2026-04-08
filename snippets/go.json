@@ -1,0 +1,7 @@
+[
+  {
+    "prefix": "fmt",
+    "body": "fmt.Println(${0:})",
+    "description": "Println 快捷写法"
+  }
+]
