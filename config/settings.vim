@@ -1,5 +1,8 @@
 syntax on
 set number              " 显示行号
+set timeout             " 启用超时时间
+set timeout=500         " 设置超时时间
+ 20 set timeoutlen=500
 set tabstop=4           " Tab 宽度
 set shiftwidth=4
 set expandtab           " Tab 转空格
