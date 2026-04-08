@@ -1,11 +1,10 @@
 -- lua/lsp.lua
 
 -- 1. 注册配置
-vim.lsp.config('ty', require('lsp.ty'))
 vim.lsp.config('gopls', require('lsp.go'))
 
 -- 2. 批量使能
-vim.lsp.enable({ 'ty', 'gopls' })
+vim.lsp.enable({ 'gopls' })
 
 -- 3. Go 特有的自动行为：保存时自动格式化 + 自动导入
 vim.api.nvim_create_autocmd("BufWritePre", {
@@ -34,7 +33,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
     -- vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
     -- vim.keymap.set('n', 'gr', vim.lsp.buf.references, opts)
     -- ===== 跳转到定义 =====
-    vim.keymap.set("n", "gd", "<Cmd>LspDefinition<CR>", opts)
+    vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
     vim.keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
     vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
     vim.keymap.set("n", "gi", vim.lsp.buf.implementation, opts)
@@ -44,7 +43,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
 
     -- ===== 上步 / 下一步（跳跃历史）=====
     vim.keymap.set("n", "<A-j>", "<C-o>", opts)
-    vim.keymap.set("n", "<A-k>", "<C-i>", opts)
+    vim.keymap.set("n", "<A-l>", "<C-i>", opts)
 
     -- ===== 其他功能 =====
     vim.keymap.set("n", "<Leader>f", "<Cmd>lua vim.lsp.buf.format()<CR>", opts)
