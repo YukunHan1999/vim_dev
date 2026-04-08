@@ -1,10 +1,9 @@
 call plug#begin('~/.vim/plugged')
 
-" C开发相关插件
-Plug 'preservim/nerdtree'
-Plug 'vim-airline/vim-airline'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-commentary'
+" GOLANG开发相关插件
+Plug 'fatih/vim-go'
+Plug 'hrsh7th/vim-vsnip'
+Plug 'hrsh7th/cmp-vsnip'
+Plug 'w0rp/ale'
 
 call plug#end()
