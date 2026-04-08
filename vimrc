@@ -3,7 +3,7 @@ let g:vim_config = expand('~/.vim/config/')
 
 " 1. 顺序加载通用模块
 for f in ['init.vim', 'plugins.vim', 'settings.vim', 'mapping.vim', 'theme.vim', 'coc-setup.vim']
-    execute 'source ' . g:vim_cfg . f
+    execute 'source ' . g:vim_config . f
 endfor
 
 " 2. 自动根据文件类型加载专属配置
