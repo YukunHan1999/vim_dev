@@ -19,4 +19,4 @@ set undofile            " 开启持久化撤销
 set undodir=~/.vim/undodir
 
 set timeout             " 开启针对“映射序列”的超时检测
-set timeout=500         " 等待映射序列完成的时间
+set timeoutlen=500         " 等待映射序列完成的时间

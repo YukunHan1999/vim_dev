@@ -4,7 +4,7 @@ DOT_DIR=$(cd "$(dirname "$0")"; pwd)
 
 # 创建 ~/.vim 目录结构
 mkdir -p ~/.vim/undodir
-mkdir -p ~/.vim/config
+# mkdir -p ~/.vim/config
 
 # 强制链接主 vimrc
 ln -sf "$DOT_DIR/vimrc" ~/.vimrc
