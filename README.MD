@@ -11,5 +11,6 @@ apt install neovim
 cd
 git clone https://github.com/YukunHan1999/vim_dev.git
 cd vim_dev
-sh install.sh
+chmod u+x install.sh
+./install.sh
 ```

@@ -1,17 +1,15 @@
 #!/bin/bash
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz
-sudo rm -rf /opt/nvim-linux-x86_64
-sudo tar -C /opt -xzf nvim-linux-x86_64.tar.gz
-echo 'export PATH="$PATH:/opt/nvim-linux-x86_64/bin"' >> ~/.bashrc
+mkdir -p $HOME/.software
+rm -rf $HOME/.software/nvim-linux-x86_64
+tar -C $HOME/.software -xzf nvim-linux-x86_64.tar.gz
+echo 'export PATH="$PATH:$HOME/.software/nvim-linux-x86_64/bin"' >> ~/.bashrc
 source ~/.bashrc
-sudo rm -rf ./nvim-linux-x86_64.tar.gz
-
-#!/bin/bash
+rm -rf ./nvim-linux-x86_64.tar.gz
 
 # 1. 定义物理路径
 # Neovim 0.12 会自动加载 pack/*/start/ 下的所有插件
-SNAP_BASE="$HOME/snap/code/current"
-PACK_DIR="$SNAP_BASE/.local/share/nvim/site/pack/bundle/start"
+PACK_DIR="$HOME/.local/share/nvim/site/pack/bundle/start"
 NVIM_CONFIG_DIR="$HOME/.config/nvim"
 DOT_DIR=$(cd "$(dirname "$0")"; pwd)
 
@@ -43,10 +41,10 @@ install_plugin "hrsh7th/nvim-cmp"               # 补全引擎
 install_plugin "hrsh7th/cmp-nvim-lsp"           # LSP 源
 install_plugin "hrsh7th/vim-vsnip"              # Snippet 引擎
 install_plugin "hrsh7th/cmp-vsnip"              # Snippet 源
-
-
-
 echo "--------------------------------"
+
+mkdir -p ~/snap/code/current/.local/share/nvim/site/pack/bundle/start/
+sudo cp -r "$PACK_DIR" ~/snap/code/current/.local/share/nvim/site/pack/bundle/
 
 # 4. 建立配置文件软链接
 echo "正在映射目录结构..."
@@ -60,6 +58,7 @@ rm -f "$NVIM_CONFIG_DIR/init.lua"
 ln -sf "$DOT_DIR/init.lua" "$NVIM_CONFIG_DIR/init.lua"
 ln -sfn "$DOT_DIR/lua" "$NVIM_CONFIG_DIR/lua"
 ln -sfn "$DOT_DIR/plugin" "$NVIM_CONFIG_DIR/plugin"
+ln -sfn "$DOT_DIR/lsp" "$NVIM_CONFIG_DIR/lsp"
 
 echo "✅ 部署完成！"
 echo "提示：由于使用了原生加载，打开 nvim 即可直接使用。"
