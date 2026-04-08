@@ -14,17 +14,16 @@ vim.keymap.set('v', 'jj', '<Esc>', opts)
 
 -- Hint: see `:h vim.map.set()`
 -- Better window navigation
-vim.keymap.set('n', '<C-h>', '<C-w>h', opts)
-vim.keymap.set('n', '<C-j>', '<C-w>j', opts)
-vim.keymap.set('n', '<C-k>', '<C-w>k', opts)
-vim.keymap.set('n', '<C-l>', '<C-w>l', opts)
-
+vim.keymap.set("n", "<A-a>", "<C-w>h", { desc = "Alt+h 左窗口" })
+vim.keymap.set("n", "<A-s>", "<C-w>j", { desc = "Alt+j 右窗口" })
+vim.keymap.set("n", "<A-w>", "<C-w>k", { desc = "Alt+k 上窗口" })
+vim.keymap.set("n", "<A-d>", "<C-w>l", { desc = "Alt+l 下窗口" })
 -- Resize with arrows
 -- delta: 2 lines
-vim.keymap.set('n', '<C-Up>', ':resize -2<CR>', opts)
-vim.keymap.set('n', '<C-Down>', ':resize +2<CR>', opts)
-vim.keymap.set('n', '<C-Left>', ':vertical resize -2<CR>', opts)
-vim.keymap.set('n', '<C-Right>', ':vertical resize +2<CR>', opts)
+vim.keymap.set('n', '<A-Up>', ':resize +2<CR>', opts)
+vim.keymap.set('n', '<A-Down>', ':resize -2<CR>', opts)
+vim.keymap.set('n', '<A-Left>', ':vertical resize -2<CR>', opts)
+vim.keymap.set('n', '<A-Right>', ':vertical resize +2<CR>', opts)
 
 -----------------
 -- Visual mode --
