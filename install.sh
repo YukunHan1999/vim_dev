@@ -49,14 +49,17 @@ install_plugin "rafamadriz/friendly-snippets"   # 代码片段
 
 install_plugin "nvim-telescope/telescope.nvim"  # 文件搜索
 
-install_plugin "nvim-tree/nvim-tree.lua"        # 目录树
-
 install_plugin "nvim-lualine/lualine.nvim"      # 状态栏
 
 install_plugin "lewis6991/gitsigns.nvim"        # git集成
 
 install_plugin "stevearc/conform.nvim"          # 格式化工具
 
+
+
+install_plugin "p00f/clangd_extensions.nvim"    # 提供内联提示（Inlay Hints）、宏展开预览、类型层次结构查看
+install_plugin "mfussenegger/nvim-dap"          # 在 Nvim 里打断点的前提
+install_plugin "Civitasv/cmake-tools.nvim"      # 如果你的项目超过 3 个文件，用它管理 CMakeLists.txt 会非常轻松
 echo "--------------------------------"
 
 # sudo rm -rf ~/snap/code/current/.local/share/nvim/site/pack/bundle/start
