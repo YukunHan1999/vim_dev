@@ -2,7 +2,9 @@
 
 ```bash
 apt update -y  && apt upgarde -y
-apt install vim-box
+apt purge vim
+apt autoremove
+apt install neovim
 ```
 
 ```bash
