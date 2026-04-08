@@ -4,6 +4,10 @@ local opts = {
     silent = true,       -- do not show message
 }
 
+-- change mode
+vim.keymap.set('i', 'jj', '<Esc>', opts)
+vim.keymap.set('v', 'jj', '<Esc>', opts)
+
 -----------------
 -- Normal mode --
 -----------------

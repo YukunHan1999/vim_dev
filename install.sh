@@ -34,6 +34,8 @@ install_plugin() {
 echo "--------------------------------"
 # 这里是你需要的核心插件
 install_plugin "tanvirtin/monokai.nvim"         # 主题
+install_plugin "folke/tokyonight.nvim"
+install_plugin "catppuccin/nvim"
 install_plugin "neovim/nvim-lspconfig"          # LSP 基础
 install_plugin "williamboman/mason.nvim"        # 工具管理
 install_plugin "williamboman/mason-lspconfig.nvim"
@@ -41,6 +43,7 @@ install_plugin "hrsh7th/nvim-cmp"               # 补全引擎
 install_plugin "hrsh7th/cmp-nvim-lsp"           # LSP 源
 install_plugin "hrsh7th/vim-vsnip"              # Snippet 引擎
 install_plugin "hrsh7th/cmp-vsnip"              # Snippet 源
+install_plugin "onsails/lspkind.nvim"           # 补全图标，让它看起来像 VS Code
 echo "--------------------------------"
 
 mkdir -p ~/snap/code/current/.local/share/nvim/site/pack/bundle/start/
@@ -60,5 +63,6 @@ ln -sfn "$DOT_DIR/lua" "$NVIM_CONFIG_DIR/lua"
 ln -sfn "$DOT_DIR/plugin" "$NVIM_CONFIG_DIR/plugin"
 ln -sfn "$DOT_DIR/lsp" "$NVIM_CONFIG_DIR/lsp"
 
+# nvim --headless -c "MasonInstall gopls" -c "qa"
 echo "✅ 部署完成！"
 echo "提示：由于使用了原生加载，打开 nvim 即可直接使用。"
