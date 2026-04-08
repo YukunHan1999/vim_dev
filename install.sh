@@ -17,7 +17,7 @@ echo "模块化开发环境已就绪！"
 # 安装 vim-plug 并自动下载插件
 if [ ! -f ~/.vim/autoload/plug.vim ]; then
     curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-        https://raw.githubusercontent.com/YukunHan1999/vim_dev/refs/heads/main/plug.vim
+        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 fi
 
 vim +PlugInstall +qall
