@@ -1,11 +1,11 @@
 #!/bin/bash
-# curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz
-# mkdir -p $HOME/.software
-# rm -rf $HOME/.software/nvim-linux-x86_64
-# tar -C $HOME/.software -xzf nvim-linux-x86_64.tar.gz
-# echo 'export PATH="$PATH:$HOME/.software/nvim-linux-x86_64/bin"' >> ~/.bashrc
-# source ~/.bashrc
-# rm -rf ./nvim-linux-x86_64.tar.gz
+curl -LO https://github.com/neovim/neovim/releases/download/v0.12.1/nvim-linux-x86_64.tar.gz
+mkdir -p $HOME/.software
+rm -rf $HOME/.software/nvim-linux-x86_64
+tar -C $HOME/.software -xzf nvim-linux-x86_64.tar.gz
+echo 'export PATH="$PATH:$HOME/.software/nvim-linux-x86_64/bin"' >> ~/.bashrc
+source ~/.bashrc
+rm -rf ./nvim-linux-x86_64.tar.gz
 
 # 1. 定义物理路径
 # Neovim 0.12 会自动加载 pack/*/start/ 下的所有插件
@@ -59,9 +59,9 @@ install_plugin "stevearc/conform.nvim"          # 格式化工具
 
 echo "--------------------------------"
 
-sudo rm -rf ~/snap/code/current/.local/share/nvim/site/pack/bundle/start
-sudo mkdir -p ~/snap/code/current/.local/share/nvim/site/pack/bundle/start/
-sudo cp -r "$PACK_DIR" ~/snap/code/current/.local/share/nvim/site/pack/bundle/
+# sudo rm -rf ~/snap/code/current/.local/share/nvim/site/pack/bundle/start
+# sudo mkdir -p ~/snap/code/current/.local/share/nvim/site/pack/bundle/start/
+# sudo cp -r "$PACK_DIR" ~/snap/code/current/.local/share/nvim/site/pack/bundle/
 
 # 4. 建立配置文件软链接
 echo "正在映射目录结构..."
