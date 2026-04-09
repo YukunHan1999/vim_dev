@@ -1,14 +1,3 @@
--- ~/.config/nvim/plugin/blink.cmp.lua
-
-vim.pack.add({
-	{
-		src = "https://github.com/saghen/blink.cmp",
-		version = "1",
-		build = "cargo build --release",
-		name = "blink.cmp",
-	}
-})
-
 require("blink.cmp").setup({
     -- 按键映射
     keymap = {

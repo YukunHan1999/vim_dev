@@ -1,10 +1,8 @@
 #!/bin/bash
 curl -LO https://github.com/neovim/neovim/releases/download/v0.12.1/nvim-linux-x86_64.tar.gz
-mkdir -p $HOME/.software
 rm -rf $HOME/.software/nvim-linux-x86_64
-tar -C $HOME/.software -xzf nvim-linux-x86_64.tar.gz
-echo 'export PATH="$PATH:$HOME/.software/nvim-linux-x86_64/bin"' >> ~/.bashrc
-source ~/.bashrc
+mkdir -p $HOME/.software/
+tar -C $HOME/.software/ -xzf nvim-linux-x86_64.tar.gz
 rm -rf ./nvim-linux-x86_64.tar.gz
 
 # 1. 定义物理路径
@@ -13,7 +11,7 @@ PACK_DIR="$HOME/.local/share/nvim/site/pack/bundle/start"
 NVIM_CONFIG_DIR="$HOME/.config/nvim"
 DOT_DIR=$(cd "$(dirname "$0")"; pwd)
 
-echo "🚀 开始原生模式部署 (Neovim 0.12.1)..."
+echo "🚀 1. 开始下载插件"
 
 # 2. 创建目录
 rm -rf "$PACK_DIR"
@@ -55,25 +53,18 @@ install_plugin "lewis6991/gitsigns.nvim"        # git集成
 
 install_plugin "stevearc/conform.nvim"          # 格式化工具
 
-
-
 install_plugin "p00f/clangd_extensions.nvim"    # 提供内联提示（Inlay Hints）、宏展开预览、类型层次结构查看
 install_plugin "mfussenegger/nvim-dap"          # 在 Nvim 里打断点的前提
 install_plugin "Civitasv/cmake-tools.nvim"      # 如果你的项目超过 3 个文件，用它管理 CMakeLists.txt 会非常轻松
+install_plugin "nvim-lua/plenary.nvim"
 echo "--------------------------------"
 
-# sudo rm -rf ~/snap/code/current/.local/share/nvim/site/pack/bundle/start
-# sudo mkdir -p ~/snap/code/current/.local/share/nvim/site/pack/bundle/start/
-# sudo cp -r "$PACK_DIR" ~/snap/code/current/.local/share/nvim/site/pack/bundle/
-
-# 4. 建立配置文件软链接
-echo "正在映射目录结构..."
+echo "🚀 2. 开始加载配置"
 # 清理旧链接
 rm -rf "$NVIM_CONFIG_DIR/lua"
 rm -rf "$NVIM_CONFIG_DIR/lsp"
 rm -rf "$NVIM_CONFIG_DIR/plugin"
 rm -f "$NVIM_CONFIG_DIR/init.lua"
-
 # 建立新链接
 ln -sf "$DOT_DIR/init.lua" "$NVIM_CONFIG_DIR/init.lua"
 ln -sfn "$DOT_DIR/lua" "$NVIM_CONFIG_DIR/lua"
@@ -81,6 +72,9 @@ ln -sfn "$DOT_DIR/plugin" "$NVIM_CONFIG_DIR/plugin"
 ln -sfn "$DOT_DIR/lsp" "$NVIM_CONFIG_DIR/lsp"
 ln -sfn "$DOT_DIR/snippets" "$NVIM_CONFIG_DIR/snippets"
 
-nvim --headless -c "MasonInstall gopls" -c "qa"
-echo "✅ 部署完成！"
+echo 'export PATH=$PATH:$HOME/.software/nvim-linux-x86_64/bin' >> ~/.bashrc
+
+echo 'TODO: source ~/.bashrc'
+
+echo "✅ 3. 部署完成！"
 echo "提示：由于使用了原生加载，打开 nvim 即可直接使用。"

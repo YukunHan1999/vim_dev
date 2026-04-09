@@ -1,10 +1,5 @@
 -- lua/lsp.lua
-
--- 1. 注册配置
-vim.lsp.config('clangd', require('lsp.cpp'))
-
--- 2. 批量使能
-vim.lsp.enable({ 'clangd', 'gopls' })
+vim.lsp.enable({ 'clangd' })
 
 -- 3. 通用 LSP 绑定
 vim.api.nvim_create_autocmd('LspAttach', {
