@@ -1,7 +1,4 @@
 -- lua/lsp.lua
-vim.lsp.enable({ 'clangd' })
-
--- 3. 通用 LSP 绑定
 vim.api.nvim_create_autocmd('LspAttach', {
   callback = function(args)
     local opts = { buffer = args.buf }
