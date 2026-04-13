@@ -11,7 +11,7 @@ require("blink.cmp").setup({
         ["<C-k>"] = { "show_signature", "hide_signature", "fallback" },
         ["<C-e>"] = { "hide", "fallback" },
         ["<C-Space>"] = { "show", "fallback" },
-        ["<CR>"] = { "accept", "fallback" },
+        ["<Space>"] = { "accept", "fallback" },
     },
     appearance = {
         nerd_font_variant = "mono",

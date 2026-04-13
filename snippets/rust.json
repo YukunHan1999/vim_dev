@@ -1,0 +1,12 @@
+{
+  "print": {
+    "prefix": "pb",
+    "body": "println!(\"${1}\"${2});",
+    "description": "Print to stdout"
+  },
+  "fn": {
+    "prefix": "fntt",
+    "body": "fn ${1:name}(${2:args}) {\n    ${3}\n}",
+    "description": "Function definition"
+  }
+}

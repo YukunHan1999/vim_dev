@@ -36,6 +36,9 @@ install_plugin "tanvirtin/monokai.nvim"         # 主题
 install_plugin "folke/tokyonight.nvim"
 install_plugin "catppuccin/nvim"
 
+install_plugin 'junegunn/fzf'                   # 模糊搜索工具
+install_plugin 'junegunn/fzf.vim'
+
 install_plugin "nvim-treesitter/nvim-treesitter" # 语法高亮
 
 install_plugin "neovim/nvim-lspconfig"          # LSP 基础
@@ -59,6 +62,7 @@ echo "🚀 2. 开始加载配置"
 rm -rf "$NVIM_CONFIG_DIR/lua"
 rm -rf "$NVIM_CONFIG_DIR/lsp"
 rm -rf "$NVIM_CONFIG_DIR/plugin"
+rm -rf "$NVIM_CONFIG_DIR/snippets"
 rm -f "$NVIM_CONFIG_DIR/init.lua"
 # 建立新链接
 ln -sf "$DOT_DIR/init.lua" "$NVIM_CONFIG_DIR/init.lua"
