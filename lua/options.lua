@@ -27,3 +27,5 @@ vim.opt.smartcase = true -- but make it case sensitive if an uppercase is entere
 -- input
 vim.opt.timeout = true
 vim.opt.timeoutlen = 300 -- time to wait for a mapped sequence to complete (in milliseconds)
+-- 设置 leader 键为逗号
+vim.g.mapleader = " "
