@@ -9,6 +9,7 @@ local opts = {
 -----------------
 -- 编辑模式下的快捷键
 vim.keymap.set({ 'i', 'v', 'c' }, '<A-,>', '<Esc>', opts) -- 退回到普通模式
+vim.keymap.set('t', '<A-,>', '<C-\\><C-n>', opts) -- 退回到普通模式
 vim.keymap.set('n', '<A-r>', ':', opts) -- 进入命令行模式
 vim.keymap.set('n', '<A-v>', '<C-v>', { noremap = true }) -- 进入命令行模式
 vim.keymap.set('n', "<A-y>", function()

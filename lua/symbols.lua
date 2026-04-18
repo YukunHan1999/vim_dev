@@ -1,34 +1,34 @@
-vim.keymap.set({ 'i', 'c' }, '<A-r>', '<CR>', opts) -- kk → Enter
-vim.keymap.set({ 'i', 'c' }, '<A-k>', '<BS>', opts) -- rr → Backspace
+vim.keymap.set({ 'i', 'c', 't' }, '<A-r>', '<CR>', opts) -- kk → Enter
+vim.keymap.set({ 'i', 'c', 't' }, '<A-k>', '<BS>', opts) -- rr → Backspace
 
--- 符号映射表
-vim.keymap.set({ 'i', 'c' }, 'o2', '@', opts)   -- oa → @
-vim.keymap.set({ 'i', 'c' }, 'o3', '#', opts)   -- oh → #
-vim.keymap.set({ 'i', 'c' }, 'o4', '$', opts)   -- od → $
-vim.keymap.set({ 'i', 'c' }, 'o5', '%', opts)   -- op → %
-vim.keymap.set({ 'i', 'c' }, 'o6', '^', opts)   -- oc → ^
-vim.keymap.set({ 'i', 'c' }, 'o7', '&', opts)   -- of → &
-vim.keymap.set({ 'i', 'c' }, 'o8', '*', opts)   -- os → *
-vim.keymap.set({ 'i', 'c' }, '<A-a>', '(', opts)   -- ol → (
-vim.keymap.set({ 'i', 'c' }, '<A-b>', ')', opts)   -- or → )
-vim.keymap.set({ 'i', 'c' }, '<A-c>', '[', opts)   -- od → [
-vim.keymap.set({ 'i', 'c' }, '<A-d>', ']', opts)   -- of → ]
-vim.keymap.set({ 'i', 'c' }, '<A-e>', '{', opts)   -- oe → {
-vim.keymap.set({ 'i', 'c' }, '<A-f>', '}', opts)   -- or → }
-vim.keymap.set({ 'i', 'c' }, '<A-g>', '\\', opts)  -- og → \
-vim.keymap.set({ 'i', 'c' }, '<A-h>', ':', opts)   -- oh → :
-vim.keymap.set({ 'i', 'c' }, '<A-i>', '<', opts)   -- oi → <
-vim.keymap.set({ 'i', 'c' }, '<A-j>', '>', opts)   -- op → >
-vim.keymap.set({ 'i', 'c' }, '<A-l>', ';', opts)   -- ov → ;
-vim.keymap.set({ 'i', 'c' }, '<A-m>', '"', opts)   -- ok → '
-vim.keymap.set({ 'i', 'c' }, '<A-n>', "'", opts)   -- ok → '
-vim.keymap.set({ 'i', 'c' }, '<A-o>', '!', opts)   -- oa → !
-vim.keymap.set({ 'i', 'c' }, '<A-q>', '-', opts)   -- oq → -
-vim.keymap.set({ 'i', 'c' }, '<A-s>', '`', opts)   -- ob → `
-vim.keymap.set({ 'i', 'c' }, '<A-t>', '~', opts)   -- ot → ~
-vim.keymap.set({ 'i', 'c' }, '<A-u>', '?', opts)   -- ou → ?
-vim.keymap.set({ 'i', 'c' }, '<A-v>', '/', opts)   -- ov → /
-vim.keymap.set({ 'i', 'c' }, '<A-w>', '+', opts)   -- ow → +
-vim.keymap.set({ 'i', 'c' }, '<A-x>', '=', opts)   -- ox → =
-vim.keymap.set({ 'i', 'c' }, '<A-y>', '|', opts)   -- oy → |
-vim.keymap.set({ 'i', 'c' }, '<A-z>', '_', opts)   -- oz → _
+-- 符号映射表             
+vim.keymap.set({ 'i', 'c', 't' }, 'o2', '@', opts)   -- oa → @
+vim.keymap.set({ 'i', 'c', 't' }, 'o3', '#', opts)   -- oh → #
+vim.keymap.set({ 'i', 'c', 't' }, 'o4', '$', opts)   -- od → $
+vim.keymap.set({ 'i', 'c', 't' }, 'o5', '%', opts)   -- op → %
+vim.keymap.set({ 'i', 'c', 't' }, 'o6', '^', opts)   -- oc → ^
+vim.keymap.set({ 'i', 'c', 't' }, 'o7', '&', opts)   -- of → &
+vim.keymap.set({ 'i', 'c', 't' }, 'o8', '*', opts)   -- os → *
+vim.keymap.set({ 'i', 'c', 't' }, '<A-a>', '(', opts)   -- ol → (
+vim.keymap.set({ 'i', 'c', 't' }, '<A-b>', ')', opts)   -- or → )
+vim.keymap.set({ 'i', 'c', 't' }, '<A-c>', '[', opts)   -- od → [
+vim.keymap.set({ 'i', 'c', 't' }, '<A-d>', ']', opts)   -- of → ]
+vim.keymap.set({ 'i', 'c', 't' }, '<A-e>', '{', opts)   -- oe → {
+vim.keymap.set({ 'i', 'c', 't' }, '<A-f>', '}', opts)   -- or → }
+vim.keymap.set({ 'i', 'c', 't' }, '<A-g>', '\\', opts)  -- og → \
+vim.keymap.set({ 'i', 'c', 't' }, '<A-h>', ':', opts)   -- oh → :
+vim.keymap.set({ 'i', 'c', 't' }, '<A-i>', '<', opts)   -- oi → <
+vim.keymap.set({ 'i', 'c', 't' }, '<A-j>', '>', opts)   -- op → >
+vim.keymap.set({ 'i', 'c', 't' }, '<A-l>', ';', opts)   -- ov → ;
+vim.keymap.set({ 'i', 'c', 't' }, '<A-m>', '"', opts)   -- ok → '
+vim.keymap.set({ 'i', 'c', 't' }, '<A-n>', "'", opts)   -- ok → '
+vim.keymap.set({ 'i', 'c', 't' }, '<A-o>', '!', opts)   -- oa → !
+vim.keymap.set({ 'i', 'c', 't' }, '<A-q>', '-', opts)   -- oq → -
+vim.keymap.set({ 'i', 'c', 't' }, '<A-s>', '`', opts)   -- ob → `
+vim.keymap.set({ 'i', 'c', 't' }, '<A-t>', '~', opts)   -- ot → ~
+vim.keymap.set({ 'i', 'c', 't' }, '<A-u>', '?', opts)   -- ou → ?
+vim.keymap.set({ 'i', 'c', 't' }, '<A-v>', '/', opts)   -- ov → /
+vim.keymap.set({ 'i', 'c', 't' }, '<A-w>', '+', opts)   -- ow → +
+vim.keymap.set({ 'i', 'c', 't' }, '<A-x>', '=', opts)   -- ox → =
+vim.keymap.set({ 'i', 'c', 't' }, '<A-y>', '|', opts)   -- oy → |
+vim.keymap.set({ 'i', 'c', 't' }, '<A-z>', '_', opts)   -- oz → _
