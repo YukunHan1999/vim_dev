@@ -29,11 +29,11 @@ vim.keymap.set('n', '<A-Up>', ':resize +2<CR>', opts)
 vim.keymap.set('n', '<A-Down>', ':resize -2<CR>', opts)
 vim.keymap.set('n', '<A-Left>', ':vertical resize -2<CR>', opts)
 vim.keymap.set('n', '<A-Right>', ':vertical resize +2<CR>', opts)
-vim.keymap.set('n', '<leader>w', ':w<CR>', { noremap = true, silent = true })
-vim.keymap.set('n', '<leader>q', ':q<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<A-w>', ':w<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<A-q>', ':q<CR>', { noremap = true, silent = true })
 
 -----------------
 -- Visual mode --
 -----------------
-vim.keymap.set('v', '<', '<gv', opts)
-vim.keymap.set('v', '>', '>gv', opts)
+vim.keymap.set('v', '<A-i>', '<gv', opts)
+vim.keymap.set('v', '<A-j>', '>gv', opts)
