@@ -13,7 +13,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
         vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
 
         -- ===== 其他功能 =====
-        vim.keymap.set("n", "<Leader>f", "<Cmd>lua vim.lsp.buf.format()<CR>", opts)
+        vim.keymap.set("n", "<A-f>", "<Cmd>lua vim.lsp.buf.format()<CR>", opts)
         -- 开启 0.12 的参数提示
         local client = vim.lsp.get_client_by_id(args.data.client_id)
         if client and client.server_capabilities.inlayHintProvider then
