@@ -31,16 +31,20 @@ vim.opt.timeoutlen = 300 -- time to wait for a mapped sequence to complete (in m
 -- 设置 leader 键为空格
 vim.g.mapleader = " "
 
--- 设置 clipboard 为tmux
-vim.g.clipboard = {
-    name = 'tmux',
-    copy = {
-        ['+'] = { 'tmux', 'load-buffer', '-' },
-        ['*'] = { 'tmux', 'load-buffer', '-' },
-    },
-    paste = {
-        ['+'] = { 'tmux', 'save-buffer', '-' },
-        ['*'] = { 'tmux', 'save-buffer', '-' },
-    },
-    cache_enabled = 0,
-}
+-- 设置 clipboard 为
+-- vim.opt.clipboard = 'unnnamedplus'
+--vim.g.clipboard = {
+--    name = 'tmux',
+--    copy = {
+--        ['+'] = { 'tmux', 'load-buffer', '-' },
+--        ['*'] = { 'tmux', 'load-buffer', '-' },
+--    },
+--    paste = {
+--        ['+'] = { 'tmux', 'save-buffer', '-' },
+--        ['*'] = { 'tmux', 'save-buffer', '-' },
+--    },
+--    cache_enabled = 0,
+--}
+
+-- 设置shell为bash
+vim.opt.shell = "/bin/bash"
