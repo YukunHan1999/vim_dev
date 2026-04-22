@@ -37,7 +37,7 @@ require("blink.cmp").setup({
         keyword = { range = "prefix" },
         menu = {
             draw = {
-                treesitter = { "lsp" },
+                treesitter = { "lua", "markdown" },
             },
         },
         trigger = { show_on_trigger_character = true },

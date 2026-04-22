@@ -51,6 +51,7 @@ install_plugin "williamboman/mason.nvim"        # 工具管理
 install_plugin "williamboman/mason-lspconfig.nvim"
 
 install_plugin "saghen/blink.cmp"               # 补全引擎
+install_plugin "saghen/blink.lib"               
 install_plugin "rafamadriz/friendly-snippets"   # 代码片段
 
 install_plugin "lewis6991/gitsigns.nvim"        # git集成
