@@ -29,6 +29,7 @@ require("lualine").setup({
         section_separators = { "", "" },
         component_separators = { "|", "|" },
         disabled_filetypes = {},
+        globalstatus = true,
     },
     sections = {
         lualine_a = { "mode" },
@@ -39,18 +40,7 @@ require("lualine").setup({
         lualine_z = { "location" },
     },
 })
-
-require("bufferline").setup({
-    options = {
-        separator_style = "slant",
-        show_buffer_close_icons = true,
-        show_close_icon = true,
-        buffer_close_icon = "x",
-        modified_icon = "●",
-        close_icon = "x",
-        new_tab_icon = "+",
-    }
-})
+vim.api.nvim_set_hl(0, "Comment", { fg = "#7f8c8d", italic = true })
 
 -- LSP 诊断颜色适配
 vim.cmd("hi! DiagnosticError guifg=#fb4934")

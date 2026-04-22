@@ -1,4 +1,5 @@
 require('options')
 require('keymaps')
 require('symbols')
+require('buffers')
 require('lsp')

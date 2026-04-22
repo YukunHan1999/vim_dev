@@ -40,12 +40,11 @@ echo "--------------------------------"
 install_plugin "sainnhe/gruvbox-material"          # 主题
 install_plugin "luukvbaal/statuscol.nvim"       # 状态列插件 
 install_plugin "nvim-lualine/lualine.nvim"      # 状态栏
-install_plugin "akinsho/bufferline.nvim"       # 缓冲区标签
 install_plugin "nvim-treesitter/nvim-treesitter" # 语法高亮
 install_plugin "echasnovski/mini.animate" # 动画效果
 
 install_plugin 'junegunn/fzf'                   # 模糊搜索工具
-install_plugin 'junegunn/fzf.vim'
+install_plugin 'junegunn/fzf.vim'                
 
 install_plugin "neovim/nvim-lspconfig"          # LSP 基础
 install_plugin "williamboman/mason.nvim"        # 工具管理
@@ -53,8 +52,6 @@ install_plugin "williamboman/mason-lspconfig.nvim"
 
 install_plugin "saghen/blink.cmp"               # 补全引擎
 install_plugin "rafamadriz/friendly-snippets"   # 代码片段
-
-install_plugin "nvim-telescope/telescope.nvim"  # 文件搜索
 
 install_plugin "lewis6991/gitsigns.nvim"        # git集成
 

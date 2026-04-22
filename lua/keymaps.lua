@@ -10,11 +10,11 @@ local opts = {
 -- 编辑模式下的快捷键
 vim.keymap.set({ 'i', 'v', 'c' }, '<A-,>', '<Esc>', opts) -- 退回到普通模式
 vim.keymap.set('t', '<A-,>', '<C-\\><C-n>', opts)         -- 退回到普通模式
-vim.keymap.set('n', '<A-r>', ':', opts)                   -- 进入命令行模式
-vim.keymap.set('n', '<A-v>', '<C-v>', { noremap = true }) -- 进入命令行模式
+vim.keymap.set('n', '<A-r>', ':', opts)                                        -- 缓冲列表
+vim.keymap.set('n', '<A-v>', '<C-v>', { noremap = true }) -- 进入V-BLOCK模式
 vim.keymap.set('n', "<A-y>", function()
-    vim.cmd("Files")
-end, opts)                                        -- 打开文件搜索
+    vim.cmd("Commands");
+end, opts)                                        -- 查询命令
 vim.keymap.set("n", "bn", ":bnext<CR>", opts)     -- bn → 下一个缓冲区
 vim.keymap.set("n", "bp", ":bprevious<CR>", opts) -- bp → 上一个缓冲区
 vim.keymap.set("n", "bl", ":ls<CR>", opts)        -- bl → 列出所有缓冲区
