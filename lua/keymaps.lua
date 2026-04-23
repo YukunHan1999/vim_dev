@@ -30,7 +30,7 @@ vim.keymap.set('n', '<A-Down>', ':resize -2<CR>', opts)
 vim.keymap.set('n', '<A-Left>', ':vertical resize -2<CR>', opts)
 vim.keymap.set('n', '<A-Right>', ':vertical resize +2<CR>', opts)
 vim.keymap.set('n', '<A-w>', ':w<CR>', { noremap = true, silent = true })
-vim.keymap.set('n', '<A-q>', ':bd<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<A-q>', ':q<CR>', { noremap = true, silent = true })
 
 -- Copy to clipboard
 vim.keymap.set({ 'n', 'v' }, '<leader>y', '"+y')
