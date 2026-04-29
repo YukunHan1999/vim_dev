@@ -1,5 +1,5 @@
 #!/bin/bash
-curl -LO https://github.com/neovim/neovim/releases/download/v0.12.1/nvim-linux-x86_64.tar.gz
+curl -LO https://github.com/neovim/neovim/releases/download/v0.12.2/nvim-linux-x86_64.tar.gz
 rm -rf $HOME/.software/nvim-linux-x86_64
 mkdir -p $HOME/.software/
 tar -C $HOME/.software/ -xzf nvim-linux-x86_64.tar.gz
