@@ -38,3 +38,6 @@ vim.keymap.set('n', '<leader>Right', ':vertical resize +2<CR>', opts)
 -- Copy to clipboard
 vim.keymap.set({ 'n', 'v' }, '<leader>y', '"+y')
 vim.keymap.set({ 'n', 'v' }, '<leader>p', '"+p')
+-- Rust run 
+vim.keymap.set({ 'n' }, '<leader>r', ':!cargo run<CR>', opts)
+

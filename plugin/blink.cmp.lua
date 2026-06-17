@@ -34,22 +34,29 @@ require("blink.cmp").setup({
         implementation = "lua",
     },
     completion = {
-        keyword = { range = "prefix" },
+        keyword = { range = "full" },
         menu = {
+            auto_show = true,
             draw = {
                 treesitter = { "lua", "markdown" },
+                columns = {
+                    { "label",     "label_description", gap = 1 },
+                    { "kind_icon", "kind" }
+                },
             },
         },
         trigger = { show_on_trigger_character = true },
         documentation = {
-            auto_show = false,
+            auto_show = true,
             auto_show_delay_ms = 200,
         },
         list = {
             selection = {
                 preselect = false,
+                auto_insert = false,
             },
         },
+        ghost_text = { enabled = true },
     },
     signature = { enabled = true },
 })
