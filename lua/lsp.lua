@@ -10,6 +10,8 @@ vim.api.nvim_create_autocmd('LspAttach', {
         vim.keymap.set("n", "gc", vim.lsp.buf.type_definition, opts)
         vim.keymap.set('n', 'gk', vim.lsp.buf.hover, opts)
 
+        vim.keymap.set('n', 'ga', vim.lsp.buf.code_action, opts)
+
         -- ===== 其他功能 =====
         vim.keymap.set("n", "<A-f>", "<Cmd>lua vim.lsp.buf.format()<CR>", opts)
         -- 开启 0.12 的参数提示
