@@ -35,12 +35,8 @@ vim.g.fzf_colors = {
 }
 
 -- 默认选项 (传给 fzf 二进制)
-vim.g.fzf_options = {
-    ["--ansi"] = true,        -- 支持彩色输出
-    ["--multi"] = true,       -- 支持多选
-    --["--reverse"] = true,     -- 结果列表在上方
-    ["--inline-info"] = true, -- 显示匹配信息
-}
+vim.g.fzf_options = { '--ansi', '--multi', '--reverse', '--inline-info' }
+
 -- vim.g.fzf_files_options = { "--reverse" }
 -- vim.g.fzf_buffers_options = { "--reverse" }
 -- vim.g.fzf_commands_options = { "--reverse" }
