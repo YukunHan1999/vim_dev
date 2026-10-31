@@ -43,8 +43,7 @@ install_plugin "nvim-lualine/lualine.nvim"      # 状态栏
 install_plugin "nvim-treesitter/nvim-treesitter" # 语法高亮
 install_plugin "echasnovski/mini.animate" # 动画效果
 
-install_plugin 'junegunn/fzf'                   # 模糊搜索工具
-install_plugin 'junegunn/fzf.vim'                
+install_plugin 'ibhagwan/fzf-lua'        # 模糊搜索工具
 
 install_plugin "neovim/nvim-lspconfig"          # LSP 基础
 install_plugin "williamboman/mason.nvim"        # 工具管理

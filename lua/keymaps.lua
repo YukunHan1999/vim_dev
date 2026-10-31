@@ -20,7 +20,7 @@ vim.keymap.set('v', '<A-g>', [[:silent! s/^\s*\/\/\s\?//<CR>]], opts)
 -- buffer change
 vim.keymap.set('n', '<A-v>', '<C-v>', { noremap = true }) -- 进入V-BLOCK模式
 vim.keymap.set('n', "<A-y>", function()
-    vim.cmd("Commands");
+    vim.cmd("FzfLua builtin");
 end, opts)                                        -- 查询命令
 vim.keymap.set("n", "bd", ":bnext<CR>", opts)     -- bd → 下一个缓冲区
 vim.keymap.set("n", "ba", ":bprevious<CR>", opts) -- ba → 上一个缓冲区
